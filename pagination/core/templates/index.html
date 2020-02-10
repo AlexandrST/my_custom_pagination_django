@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+  <div class="">
+      <ul>
+      {% for all_items in all_data %}
+       {% ifchanged all_items.id_file %}
+        <li>
+        <div>{{all_items.id_file}}</div>
+        <div>{{all_items.country_id}}</div>
+     {% else %}
+         <div>{{all_items.country_id}}</div>
+        {% endifchanged %} 
+      {% endfor %}
+    </li>
+  </div>
+
+
+  
+</body>
+</html>
